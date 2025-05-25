@@ -1,0 +1,56 @@
+# Build results
+bin/
+obj/
+TestResults/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+
+# Visual Studio files
+.vscode/
+*.vspscc
+.vs/
+*.dbmdl
+
+# Rider settings
+.idea/
+*.sln.iml
+
+# ASP.NET
+wwwroot/lib/
+appsettings.*.json
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+
+# dotCover
+*.dotCover
+
+# JetBrains
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Environment configs
+.env
+secrets.json
+
+# Test coverage
+coverage/
+coverage*.json
+lcov.info
+
+# Rider/JetBrains artifacts
+.idea/

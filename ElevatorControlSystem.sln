@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorControlSystem", "ElevatorControlSystem\ElevatorControlSystem.csproj", "{28223A9D-2F5E-49C5-AF04-57677AEAF78D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorControlSystem.Tests", "ElevatorControlSystem.Tests\ElevatorControlSystem.Tests.csproj", "{79EF7580-5C44-44BE-9726-AD9832DD1820}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28223A9D-2F5E-49C5-AF04-57677AEAF78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28223A9D-2F5E-49C5-AF04-57677AEAF78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28223A9D-2F5E-49C5-AF04-57677AEAF78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28223A9D-2F5E-49C5-AF04-57677AEAF78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EF7580-5C44-44BE-9726-AD9832DD1820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EF7580-5C44-44BE-9726-AD9832DD1820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EF7580-5C44-44BE-9726-AD9832DD1820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EF7580-5C44-44BE-9726-AD9832DD1820}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
