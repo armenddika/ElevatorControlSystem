@@ -4,7 +4,7 @@ namespace ElevatorControlSystem.Models
     {
         public int Id { get; }
         public int CurrentFloor { get; private set; } = 1;
-        public Direction Direction { get; private set; } = Direction.Idle;
+        public Direction Direction { get; set; } = Direction.Idle;
 
         private readonly Queue<int> _stops = new();
         private readonly Queue<ElevatorRequest> _pickupRequests = new();
@@ -22,7 +22,7 @@ namespace ElevatorControlSystem.Models
             UpdateDirection();
         }
 
-        public void MoveOneStep(int moveSeconds, int boardSeconds)
+        public void MoveOneStep()
         {
             if (_stops.Count == 0)
             {
@@ -35,20 +35,13 @@ namespace ElevatorControlSystem.Models
             if (CurrentFloor < target) CurrentFloor++;
             else if (CurrentFloor > target) CurrentFloor--;
 
-            Thread.Sleep(moveSeconds * 1000);
-
             if (CurrentFloor == target)
             {
-                Console.WriteLine($"Elevator {Id} arrived at floor {CurrentFloor} — boarding/unboarding for {boardSeconds}s");
-                Thread.Sleep(boardSeconds * 1000);
-                Console.WriteLine($"Elevator {Id} debarked passengers at floor {CurrentFloor}");
-
                 _stops.Dequeue();
 
                 var pickup = _pickupRequests.FirstOrDefault(p => p.FromFloor == CurrentFloor);
                 if (pickup != null)
                 {
-                    Console.WriteLine($"Passenger boarded elevator {Id} at floor {CurrentFloor}, destination: {pickup.ToFloor}");
                     _pickupRequests.Dequeue();
                     if (!_stops.Contains(pickup.ToFloor))
                         _stops.Enqueue(pickup.ToFloor);
@@ -58,7 +51,7 @@ namespace ElevatorControlSystem.Models
             }
         }
 
-        private void UpdateDirection()
+        public void UpdateDirection()
         {
             if (_stops.Count == 0)
             {
